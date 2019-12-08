@@ -1,0 +1,1 @@
+Plantilla con UI5 tooling montado
