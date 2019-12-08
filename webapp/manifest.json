@@ -1,0 +1,48 @@
+{
+	"_version": "1.0.0",
+	"sap.app": {
+		"id": "cam.its",
+		"type": "application"
+	},
+	"sap.ui5": {
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"rootView": {
+			"viewName": "cam.its.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "cam.its.i18n.i18n"
+				}
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/principal.json"
+			}
+		},
+		"resources": {
+			"css": [
+				{
+					"uri": "css/styles.css"
+				}
+			]
+        },
+        "contentDensities": {
+            "compact": false,
+            "cozy": false
+        },
+        "resourceRoots":{
+            
+        }
+	}
+}

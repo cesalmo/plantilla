@@ -1,0 +1,18 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m" controllerName="cam.its.controller.App" displayBlock="true">
+    <Shell>
+        <App>
+             <pages>
+                <Page title="FIORI ITS" backgroundDesign="List">
+
+                    <Label text="Material" labelFor="inputMatnr"/>
+                    <Input
+                        id="inputMatnr"
+                        type="Text"
+                        placeholder="Enter Text ..." 
+                        />
+                </Page>
+            </pages>
+        </App>
+    </Shell>
+</mvc:View>

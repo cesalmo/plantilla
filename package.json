@@ -1,0 +1,36 @@
+{
+  "name": "cam-its",
+  "version": "1.0.0",
+  "description": "Sustitución ITS",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openui5/sap.m": "^1.73.1",
+    "@openui5/sap.ui.core": "^1.73.1"
+  },
+  "devDependencies": {
+    "npm-watch": "^0.6.0",
+    "rimraf": "^3.0.0",
+    "serve": "^11.2.0"
+  },
+  "scripts": {
+    "start": "npm-run-all sapbuild --parallel watch start:webapp",
+    "start:webapp": "ui5 serve",
+    "start:dist": "serve dist",
+    "lint": "eslint webapp",
+    "build": "rimraf dist && ui5 build self-contained -a --exclude-task=createDebugFiles",
+    "sapbuild": "rimraf dist && ui5 build",
+    "watch": "npm-watch sapbuild"
+  },
+  "watch": {
+    "sapbuild": {
+      "patterns": [
+        "webapp"
+      ],
+      "extensions": "js,json,xml,html,properties",
+      "delay": 500,
+      "runOnChangeOnly": true
+    }
+  }
+}
