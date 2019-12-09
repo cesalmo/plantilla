@@ -1,0 +1,9 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:mvc="sap.ui.core.mvc"
+    controllerName="cam.its.controller.Detail">
+    <Page title="Página de detalle">
+		<ObjectHeader title="Detalle"/>
+	</Page>
+</mvc:View>

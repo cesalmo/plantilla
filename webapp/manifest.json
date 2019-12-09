@@ -1,6 +1,8 @@
 {
 	"_version": "1.0.0",
 	"sap.app": {
+		"title": "{{title}}",
+		"applicationVersion": {},
 		"id": "cam.its",
 		"type": "application"
 	},
@@ -9,7 +11,8 @@
 			"minUI5Version": "1.60.0",
 			"libs": {
 				"sap.ui.core": {},
-				"sap.m": {}
+				"sap.m": {},
+				"sap.ui.layout": {}
 			}
 		},
 		"rootView": {
@@ -38,8 +41,8 @@
 			]
         },
         "contentDensities": {
-            "compact": false,
-            "cozy": false
+            "compact": true,
+            "cozy": true
         },
         "resourceRoots":{
             

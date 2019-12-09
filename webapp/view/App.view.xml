@@ -1,16 +1,57 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" 
-    xmlns="sap.m" controllerName="cam.its.controller.App" displayBlock="true">
+<mvc:View 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    controllerName="cam.its.controller.App" 
+    displayBlock="true">
     <Shell>
         <App>
              <pages>
                 <Page title="FIORI ITS" backgroundDesign="List">
-
-                    <Label text="Material" labelFor="inputMatnr"/>
-                    <Input
-                        id="inputMatnr"
-                        type="Text"
-                        placeholder="Enter Text ..." 
-                        />
+                     <content>
+                        <Label text="Material" labelFor="inputMatnr"/>
+                        
+                        <Input
+                            id="inputMatnr"
+                            type="Text"
+                            placeholder="Enter Text ..." 
+                            />
+                        <Button  
+                            text="Consulta" 
+                            id="BotonConsulta"
+                            press="onPressBotonConsulta"
+                            />
+                            <Panel id="panel1" visible="false">
+                                <l:Grid>
+                                    <Text text="Cuanto: {LQNUM}"/>
+                                    <Text text="Material:  {MATNR}"/>
+                                    <Text text="Descripción: {i18n>lineFeed}  {MAKTX}"/>
+                                    <Text text="Tipo Almacén:  {LGTYP}"/>
+                                    <Text text="Ubicación:  {LGPLA}"/>
+                                    <Text text="Centro:  {WERKS}"/>
+                                    <Text text="Cantidad:  {VERME}"/>
+                                    <Text text="Unidad:  {MEINS}"/>
+                                    <Text text="Fecha Cad:  {VFDAT}"/>
+                                </l:Grid>
+                            </Panel>
+                        <List 
+                            noDataText="Drop list items here1" 
+                            id="list1">
+                            <items>
+                                <ObjectListItem 
+                                    id="list1Template"
+                                    type="Active" 
+                                    title="{LQNUM}" 
+                                    number="{VERME}" 
+                                    numberUnit="{MEINS}" 
+                                    intro="{MAKTX}" 
+                                    press="onItemSelected"
+                                    
+                                    >
+                                </ObjectListItem>
+                            </items>
+                        </List>
+                    </content>
                 </Page>
             </pages>
         </App>
