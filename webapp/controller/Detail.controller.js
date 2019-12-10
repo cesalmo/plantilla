@@ -10,7 +10,10 @@ sap.ui.define(
         return Controller.extend( "cam.its.controller.Detail",{
 
             onInit: function(){
-
+   
+            var oComponent = this.getOwnerComponent();
+            var oRouter = oComponent.getRouter();
+            
             }
 
 

@@ -18,8 +18,7 @@
 		"rootView": {
 			"viewName": "cam.its.view.App",
 			"type": "XML",
-			"async": true,
-			"id": "app"
+			"async": true
 		},
 		"models": {
 			"i18n": {
@@ -33,6 +32,34 @@
 				"uri": "model/principal.json"
 			}
 		},
+
+		"routing": {
+			"config": {
+			"routerClass": "sap.m.routing.Router",
+			"viewType": "XML",
+			"viewPath": "cam.its.view",
+			"controlId": "vistaRaiz",
+			"controlAggregation": "pages",
+			"transition": "slide",
+			"async": true
+			},
+			"routes": [
+				{
+					"pattern" : "patternDetail",
+					"name" : "toDetail",
+					"target" : "detail"
+					}
+			],
+			"targets": {
+				"detail":{
+					"viewPath": "cam.its.view",
+					"viewName": "Detail",
+					"viewId": "vistaDetalle",
+					"viewLevel": 1
+				}
+			}
+		},
+
 		"resources": {
 			"css": [
 				{

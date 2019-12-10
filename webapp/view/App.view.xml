@@ -5,7 +5,7 @@
     controllerName="cam.its.controller.App" 
     displayBlock="true">
     <Shell>
-        <App>
+        <App id="vistaRaiz">
              <pages>
                 <Page title="FIORI ITS" backgroundDesign="List">
                      <content>

@@ -2,8 +2,11 @@
     xmlns="sap.m"
     xmlns:l="sap.ui.layout"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:semantic="sap.m.semantic"
     controllerName="cam.its.controller.Detail">
-    <Page title="Página de detalle">
-		<ObjectHeader title="Detalle"/>
-	</Page>
+    <semantic:FullscreenPage
+      title="Detalle"
+      showNavButton="true"
+      navButtonPress="onNavBack">
+    </semantic:FullscreenPage>
 </mvc:View>

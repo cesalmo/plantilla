@@ -5,7 +5,7 @@ sap.ui.define(
     return UIComponent.extend('cam.its.Component', {
       metadata: {
         manifest: 'json',
-      }
+      },
 
       /**
        * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
@@ -13,19 +13,19 @@ sap.ui.define(
        * @public
        * @override
        */
-    //   init: function() {
+      init: function() {
         // call the base component's init function
-        // UIComponent.prototype.init.apply(this, arguments);
+        UIComponent.prototype.init.apply(this, arguments);
 
         // initialize the error handler with the component
         // this._oErrorHandler = new ErrorHandler(this);
 
-        // // set the device model
+        // set the device model
         // this.setModel(models.createDeviceModel(), "device");
 
-        // // create the views based on the url/hash
-        // this.getRouter().initialize();
-    //   }
+        // create the views based on the url/hash
+        this.getRouter().initialize();
+      }
 
       /**
        * The component is destroyed by UI5 automatically.

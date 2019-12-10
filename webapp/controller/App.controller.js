@@ -26,13 +26,17 @@ sap.ui.define([
 			oList1.bindItems("/mydata", olist1Template);
 		},
 		onItemSelected: function(e){
-			var sPath = e.getSource().getBindingContext().getPath();
-			var oPanel1 = this.byId("panel1");
-			var oModel = this.getView().getModel();
-			oPanel1.setModel(oModel);
-			oPanel1.bindElement({path : sPath});
-			oPanel1.setVisible(true);
+			// var sPath = e.getSource().getBindingContext().getPath();
+			// var oPanel1 = this.byId("panel1");
+			// var oModel = this.getView().getModel();
+			// oPanel1.setModel(oModel);
+			// oPanel1.bindElement({path : sPath});
+			// oPanel1.setVisible(true);
 
+			// recupera router de componente y navega
+			var oComponent = this.getOwnerComponent();
+			var oRouter = oComponent.getRouter();
+			oRouter.navTo("toDetail");
 
 		}
 
