@@ -1,78 +1,85 @@
 {
-	"_version": "1.0.0",
-	"sap.app": {
-		"title": "{{title}}",
-		"applicationVersion": {},
-		"id": "cam.its",
-		"type": "application"
-	},
-	"sap.ui5": {
-		"dependencies": {
-			"minUI5Version": "1.60.0",
-			"libs": {
-				"sap.ui.core": {},
-				"sap.m": {},
-				"sap.ui.layout": {}
-			}
-		},
-		"rootView": {
-			"viewName": "cam.its.view.App",
-			"type": "XML",
-			"async": true
-		},
-		"models": {
-			"i18n": {
-				"type": "sap.ui.model.resource.ResourceModel",
-				"settings": {
-					"bundleName": "cam.its.i18n.i18n"
-				}
-			},
-			"": {
-				"type": "sap.ui.model.json.JSONModel",
-				"uri": "model/principal.json"
-			}
-		},
-
-		"routing": {
-			"config": {
-			"routerClass": "sap.m.routing.Router",
-			"viewType": "XML",
-			"viewPath": "cam.its.view",
-			"controlId": "vistaRaiz",
-			"controlAggregation": "pages",
-			"transition": "slide",
-			"async": true
-			},
-			"routes": [
-				{
-					"pattern" : "patternDetail",
-					"name" : "toDetail",
-					"target" : "detail"
-					}
-			],
-			"targets": {
-				"detail":{
-					"viewPath": "cam.its.view",
-					"viewName": "Detail",
-					"viewId": "vistaDetalle",
-					"viewLevel": 1
-				}
-			}
-		},
-
-		"resources": {
-			"css": [
-				{
-					"uri": "css/styles.css"
-				}
-			]
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        },
-        "resourceRoots":{
-            
+  "_version": "1.0.0",
+  "sap.app": {
+    "title": "{{title}}",
+    "applicationVersion": {},
+    "id": "cam.its",
+    "type": "application"
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.60.0",
+      "libs": {
+        "sap.ui.core": {},
+        "sap.m": {},
+        "sap.ui.layout": {}
+      }
+    },
+    "rootView": {
+      "viewName": "cam.its.view.App",
+      "type": "XML",
+      "async": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "cam.its.i18n.i18n"
         }
-	}
+      },
+      "": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/principal.json"
+      }
+    },
+
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "cam.its.view",
+        "controlId": "vistaRaiz",
+        "controlAggregation": "pages",
+        "transition": "slide",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "toApp",
+          "target": "targetApp"
+        },
+        {
+          "pattern": "patternDetail",
+          "name": "toDetail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+		  "targetApp": {
+			"viewPath": "cam.its.view",
+			"viewName": "App",
+			"viewId": "vistaApp"	  
+		  },
+        "detail": {
+          "viewPath": "cam.its.view",
+          "viewName": "Detail",
+          "viewId": "vistaDetalle"
+        }
+      }
+    },
+
+    "resources": {
+      "css": [
+        {
+          "uri": "css/styles.css"
+        }
+      ]
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "resourceRoots": {}
+  }
 }
