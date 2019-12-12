@@ -22,7 +22,16 @@ sap.ui.define(
           .attachPatternMatched(this._onRouteMatched, this);
       },
 
-      _onRouteMatched: function() {},
+      _onRouteMatched: function(e) {
+        // recupera datos y bindea
+        var sPath = e.getParameter("arguments");
+        var sRuta = "/mydata/" + sPath.number;
+        var oModel = this.getView().getModel();
+        var oPanel = this.byId("panel1");
+        oPanel.setModel(oModel);
+        oPanel.bindElement({path: sRuta})
+        
+      },
 
       onNavBack: function(e) {
         var oHistory = History.getInstance();

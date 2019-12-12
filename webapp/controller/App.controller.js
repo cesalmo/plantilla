@@ -33,10 +33,12 @@ sap.ui.define([
 			// oPanel1.bindElement({path : sPath});
 			// oPanel1.setVisible(true);
 
+			var sPath = e.getSource().getBindingContext().getPath();
+			var sNumber = sPath.slice(8);
 			// recupera router de componente y navega
 			var oComponent = this.getOwnerComponent();
 			var oRouter = oComponent.getRouter();
-			oRouter.navTo("toDetail");
+			oRouter.navTo("toDetail", { number: sNumber});
 
 		}
 

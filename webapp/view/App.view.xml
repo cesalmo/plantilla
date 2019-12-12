@@ -21,19 +21,7 @@
                             id="BotonConsulta"
                             press="onPressBotonConsulta"
                             />
-                            <Panel id="panel1" visible="false">
-                                <l:Grid>
-                                    <Text text="Cuanto: {LQNUM}"/>
-                                    <Text text="Material:  {MATNR}"/>
-                                    <Text text="Descripción: {i18n>lineFeed}  {MAKTX}"/>
-                                    <Text text="Tipo Almacén:  {LGTYP}"/>
-                                    <Text text="Ubicación:  {LGPLA}"/>
-                                    <Text text="Centro:  {WERKS}"/>
-                                    <Text text="Cantidad:  {VERME}"/>
-                                    <Text text="Unidad:  {MEINS}"/>
-                                    <Text text="Fecha Cad:  {VFDAT}"/>
-                                </l:Grid>
-                            </Panel>
+                            
                         <List 
                             noDataText="Drop list items here1" 
                             id="list1">

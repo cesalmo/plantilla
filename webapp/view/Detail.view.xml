@@ -8,5 +8,18 @@
       title="Detalle"
       showNavButton="true"
       navButtonPress="onNavBack">
+        <Panel id="panel1" visible="true">
+            <l:Grid>
+                <Text text="Cuanto: {LQNUM}"/>
+                <Text text="Material:  {MATNR}"/>
+                <Text text="Descripción: {i18n>lineFeed}  {MAKTX}"/>
+                <Text text="Tipo Almacén:  {LGTYP}"/>
+                <Text text="Ubicación:  {LGPLA}"/>
+                <Text text="Centro:  {WERKS}"/>
+                <Text text="Cantidad:  {VERME}"/>
+                <Text text="Unidad:  {MEINS}"/>
+                <Text text="Fecha Cad:  {VFDAT}"/>
+            </l:Grid>
+        </Panel>
     </semantic:FullscreenPage>
 </mvc:View>
