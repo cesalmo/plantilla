@@ -1,1 +1,1 @@
-Plantilla con UI5 tooling montado
+Plantilla con UI5 tooling montado. Rama app_no_router es una single app con una unica vista implementada mediante el uso de fragmentos, sin router.
