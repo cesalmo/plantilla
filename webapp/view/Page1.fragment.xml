@@ -1,0 +1,52 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:f="sap.ui.layout.form">
+    <Page 
+        id="p1" 
+        title="Consulta por Nº de Empleado" 
+        backgroundDesign="List"
+        >
+        <content>
+            <VBox class="sapUiSmallMargin">
+                <f:SimpleForm 
+                    
+                    id="SimpleFormDisplay354"
+                    editable="true"
+                    layout="ResponsiveGridLayout"
+                    title="Datos"
+                    labelSpanXL="3"
+                    labelSpanL="3"
+                    labelSpanM="3"
+                    labelSpanS="12"
+                    adjustLabelSpan="false"
+                    emptySpanXL="4"
+                    emptySpanL="4"
+                    emptySpanM="4"
+                    emptySpanS="0"
+                    columnsXL="1"
+                    columnsL="1"
+                    columnsM="1"
+                    singleContainerFullSize="false" >
+                    <f:content >
+                        <Label text="Nº Empleado" labelFor="inputEmpleado1" required="true" />
+                        <Input 
+                            id="inputEmpleado1"  type="Text" placeholder="" value="{page1>/EmpleadoNr}" 
+                            submit=".page1OnSubmitInputEmpleado1"  editable="true" enabled="true" showValueHelp="true" valueHelpRequest="page1OnInputEmpleado1HelpRequest"/> 
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+
+        </content>
+            <footer>
+                <Bar>
+                    <contentRight>
+                        <Button text="Consulta" press="page1onNavtoPage2" icon="sap-icon://open-command-field" />
+                    </contentRight>
+                    <contentLeft>
+                        <Button text="Atrás" press="onNavPage1to0" icon="sap-icon://nav-back" />
+                    </contentLeft>
+                </Bar>
+            </footer>
+    </Page>
+</core:FragmentDefinition>

@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+    <SelectDialog
+        search="page1OnSearchPage1SelectDialog"
+        confirm=".page1OnConfirmPage1SelectDialog"
+		noDataText="Sin datos"
+		title="Seleccdionar empleados"
+        items="{/data}">
+        <StandardListItem 
+            title="{id}" 
+            description="{employee_name}"
+            
+            >
+
+        </StandardListItem>
+    </SelectDialog>
+</core:FragmentDefinition>

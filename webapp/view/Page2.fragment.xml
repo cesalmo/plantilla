@@ -1,0 +1,48 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:f="sap.ui.layout.form">
+    
+        <Page 
+            id="p2" 
+            title="Datos empleado" 
+            backgroundDesign="List">
+            <content>
+                <VBox class="sapUiSmallMargin">
+                    <f:SimpleForm id="SimpleFormP2"
+                        editable="false"
+                        layout="ResponsiveGridLayout"
+                        title="Empleado"
+                        labelSpanXL="3"
+                        labelSpanL="3"
+                        labelSpanM="3"
+                        labelSpanS="3"
+                        adjustLabelSpan="false"
+                        emptySpanXL="0"
+                        emptySpanL="0"
+                        emptySpanM="0"
+                        emptySpanS="0"
+                        columnsXL="1"
+                        columnsL="1"
+                        columnsM="1"
+                        singleContainerFullSize="false" >
+                        <f:content >
+                            <Label text="Nombre"/>
+                            <Input value="{employee_name}" editable="false" />
+                            <Label text="Edad"/>
+                            <Input value="{employee_age}" editable="false" />
+                            <Label text="Salario"/>
+                            <Input value="{employee_salary}" editable="false" />
+                        </f:content>
+                    </f:SimpleForm>
+                </VBox>
+            </content>
+            <footer>
+                <Bar> 
+                    <contentLeft>
+                        <Button text="Atrás" press="page2OnNavPage1" icon="sap-icon://nav-back"  />
+                    </contentLeft>
+                </Bar>
+            </footer>
+        </Page>
+</core:FragmentDefinition>

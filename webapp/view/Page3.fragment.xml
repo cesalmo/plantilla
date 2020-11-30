@@ -1,0 +1,37 @@
+<core:FragmentDefinition 
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core" 
+    xmlns:f="sap.ui.layout.form">
+    
+        <Page 
+            id="p3" 
+            title="Lista empleados" 
+            backgroundDesign="List">
+            <content>
+                <Table >
+                    <columns>
+                        <Column >
+                            <Text text="Id."/>
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem >
+                            <cells>
+                                <ObjectIdentifier 
+                                    title=""
+                                    text=""
+                                ></ObjectIdentifier>
+                            </cells>                        
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+            <footer>
+                <Bar> 
+                    <contentLeft>
+                        <Button text="Atrás" press="page3OnNavPage0" icon="sap-icon://nav-back"  />
+                    </contentLeft>
+                </Bar>
+            </footer>
+        </Page>
+</core:FragmentDefinition>

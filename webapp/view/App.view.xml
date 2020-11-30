@@ -1,46 +1,19 @@
-<mvc:View 
-    xmlns:mvc="sap.ui.core.mvc" 
-    xmlns="sap.m"
-    xmlns:l="sap.ui.layout"
+<mvc:View xmlns:tnt="sap.tnt" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m" 
+    xmlns:core="sap.ui.core"
+    width="98%"
+    height="100%"
     controllerName="cam.its.controller.App" 
+    id="Vista1"
     displayBlock="true">
-    <Shell>
-        <App id="vistaRaiz">
-             <pages>
-                <Page title="FIORI ITS" backgroundDesign="List">
-                     <content>
-                        <Label text="Material" labelFor="inputMatnr"/>
-                        
-                        <Input
-                            id="inputMatnr"
-                            type="Text"
-                            placeholder="Enter Text ..." 
-                            />
-                        <Button  
-                            text="Consulta" 
-                            id="BotonConsulta"
-                            press="onPressBotonConsulta"
-                            />
-                            
-                        <List 
-                            noDataText="Drop list items here1" 
-                            id="list1">
-                            <items>
-                                <ObjectListItem 
-                                    id="list1Template"
-                                    type="Active" 
-                                    title="{LQNUM}" 
-                                    number="{VERME}" 
-                                    numberUnit="{MEINS}" 
-                                    intro="{MAKTX}" 
-                                    press="onItemSelected"
-                                    
-                                    >
-                                </ObjectListItem>
-                            </items>
-                        </List>
-                    </content>
-                </Page>
+    <Shell appWidthLimited="false" >
+        <App id="vistaRaiz" class="sapUiResponsiveMargin" >
+            <pages>
+                
+                <core:Fragment fragmentName="cam.its.view.Page0" type="XML" />
+                <core:Fragment fragmentName="cam.its.view.Page1" type="XML" /> <!--"1.1 Input Nr Usuario -->
+                <!-- <core:Fragment fragmentName="cam.its.view.Page2" type="XML" />1.2 Visualizar Usuario-->
             </pages>
         </App>
     </Shell>

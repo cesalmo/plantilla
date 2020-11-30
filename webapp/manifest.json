@@ -1,10 +1,20 @@
 {
-  "_version": "1.0.0",
+  "_version": "1.1.0",
   "sap.app": {
     "title": "{{title}}",
-    "applicationVersion": {},
+    "applicationVersion": {
+      "version": "1.1.0"
+    },
     "id": "cam.its",
     "type": "application"
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "deviceTypes": {
+      "phone": true,
+      "tablet": true,
+      "desktop": true
+    }
   },
   "sap.ui5": {
     "dependencies": {
@@ -27,48 +37,26 @@
           "bundleName": "cam.its.i18n.i18n"
         }
       },
-      "": {
+      "page1": {
         "type": "sap.ui.model.json.JSONModel",
-        "uri": "model/principal.json"
-      }
-    },
-
-    "routing": {
-      "config": {
-        "routerClass": "sap.m.routing.Router",
-        "viewType": "XML",
-        "viewPath": "cam.its.view",
-        "controlId": "vistaRaiz",
-        "controlAggregation": "pages",
-        "transition": "slide",
-        "async": true
+        "uri": "model/page1.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
+        }
       },
-      "routes": [
-        {
-          "pattern": "",
-          "name": "toApp",
-          "target": "targetApp"
-        },
-        {
-          "pattern": "mydata/{number}",
-          "name": "toDetail",
-          "target": "detail"
-        }
-      ],
-      "targets": {
-		  "targetApp": {
-			"viewPath": "cam.its.view",
-			"viewName": "App",
-			"viewId": "vistaApp"	  
-		  },
-        "detail": {
-          "viewPath": "cam.its.view",
-          "viewName": "Detail",
-          "viewId": "vistaDetalle"
+      "employees": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "model/employees.json",
+        "settings": {
+          "defaultBindingMode": "TwoWay"
         }
       }
     },
-
+    "routing": {
+      "config": {},
+      "routes": [],
+      "targets": {}
+    },
     "resources": {
       "css": [
         {
