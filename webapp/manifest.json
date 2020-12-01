@@ -14,7 +14,10 @@
       "phone": true,
       "tablet": true,
       "desktop": true
-    }
+    },
+    "supportedThemes": [
+      "sap_bluecrystal"
+    ]
   },
   "sap.ui5": {
     "dependencies": {
