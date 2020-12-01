@@ -8,7 +8,10 @@
             title="Lista empleados" 
             backgroundDesign="List">
             <content>
-                <Table >
+                <Table 
+                    id="p3Tabla1"
+                    items="{/data}"
+                    >
                     <columns>
                         <Column >
                             <Text text="Id."/>
@@ -18,8 +21,8 @@
                         <ColumnListItem >
                             <cells>
                                 <ObjectIdentifier 
-                                    title=""
-                                    text=""
+                                    title="{id}"
+                                    text="{employee_name}"
                                 ></ObjectIdentifier>
                             </cells>                        
                         </ColumnListItem>

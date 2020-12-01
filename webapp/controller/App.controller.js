@@ -120,8 +120,6 @@ sap.ui.define([
 			oVistaRaiz.to(this.byId('p1'))
 		},
 		page0OnNavPage3: function () {
-			debugger;
-
 
 			if (!this._oFragmentPage3) {
 				Fragment.load({
@@ -130,14 +128,17 @@ sap.ui.define([
 				})
 
 					.then(function (oFragmentPage3) {
-						debugger;
 						this._oFragmentPage3 = oFragmentPage3;
+
+						// @ts-ignore
+						var oModel = this.getOwnerComponent().getModel("employees");
+						this._oFragmentPage3.setModel(oModel);
 
 						// @ts-ignore
 						var oVistaRaiz = this.byId('vistaRaiz');
 						oVistaRaiz.addPage(this._oFragmentPage3);
-						oVistaRaiz.to(this._oFragmentPage3)
 
+						oVistaRaiz.to(this._oFragmentPage3);
 					}.bind(this));
 			} else {
 				var oVistaRaiz = this.byId('vistaRaiz');
