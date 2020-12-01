@@ -7,6 +7,7 @@
     },
     "id": "cam.its",
     "type": "application"
+
   },
   "sap.ui": {
     "technology": "UI5",
@@ -16,7 +17,7 @@
       "desktop": true
     },
     "supportedThemes": [
-      "sap_bluecrystal"
+      "sap_belize"
     ]
   },
   "sap.ui5": {
@@ -26,6 +27,7 @@
         "sap.ui.core": {},
         "sap.m": {},
         "sap.ui.layout": {}
+        
       }
     },
     "rootView": {
@@ -37,7 +39,9 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "cam.its.i18n.i18n"
+          "bundleName": "cam.its.i18n.i18n",
+          "supportedLocales": ["es"],
+          "fallbackLocale": ""
         }
       },
       "page1": {

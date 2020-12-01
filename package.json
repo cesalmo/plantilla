@@ -6,9 +6,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@openui5/sap.m": "^1.73.1",
-    "@openui5/sap.ui.core": "^1.73.1",
-    "@openui5/themelib_sap_belize": "^1.73.1"
   },
   "devDependencies": {
     "@openui5/ts-types": "^1.60.5",
@@ -23,6 +20,7 @@
     "lint": "eslint webapp",
     "build": "rimraf dist && ui5 build self-contained -a --exclude-task=createDebugFiles",
     "sapbuild": "rimraf dist && ui5 build",
+    "devbuild": "ui5 build dev",
     "watch": "npm-watch sapbuild"
   },
   "watch": {
